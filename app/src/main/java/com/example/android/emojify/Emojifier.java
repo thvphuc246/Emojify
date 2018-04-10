@@ -39,6 +39,13 @@ public class Emojifier {
         //Toast a message if no faces are detected
         if (faces.size() == 0) {
             Toast.makeText(context, R.string.no_faces_message, Toast.LENGTH_SHORT).show();
+        } else {
+            //Iterate through the faces
+            for (int i = 0; i < faces.size(); ++i) {
+                Face face = faces.valueAt(i);
+                //Get the appropriate emoji for each face
+                whichEmoji(face);
+            }
         }
 
         //Release the detector

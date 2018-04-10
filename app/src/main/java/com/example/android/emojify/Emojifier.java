@@ -41,4 +41,13 @@ public class Emojifier {
         //Release the detector
         detector.release();
     }
+
+    static void getClassifications(Face face) {
+        Log.d(TAG, "getClassifications: smilingProb = "
+                + face.getIsSmilingProbability());
+        Log.d(TAG, "getClassifications: leftEyeOpenProb = "
+                + face.getIsLeftEyeOpenProbability());
+        Log.d(TAG, "getClassifications: rightEyeOpenProb = "
+                + face.getIsRightEyeOpenProbability());
+    }
 }
